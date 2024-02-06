@@ -45,11 +45,11 @@ if __name__ == '__main__':
         device = torch.device('cpu')
     
     if args.model == 'CNN1':
-        model = vanillaCNN()
+        model = vanillaCNN().to(device)
     elif args.model == 'CNN2':
-        model = vanillaCNN2()
+        model = vanillaCNN2().to(device)
     elif args.model == 'VGG': 
-        model = VGG19()
+        model = VGG19().to(device)
     else:
         raise ValueError("model not supported")
     
